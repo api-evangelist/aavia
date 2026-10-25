@@ -1,25 +1,75 @@
 aid: aavia
+
 name: Aavia
-description: 'Aavia is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by starting-line-vc) and added to the network as a stub for full-pipeline profiling.'
-url: https://raw.githubusercontent.com/api-evangelist/aavia/refs/heads/main/apis.yml
+
+image: http://aavia.io/cdn/shop/files/aavia_web.png?v=1745267749
+
+description: 'Aavia helps you understand your hormone cycle symptoms, find what actually works, and advocate for the care you deserve. Track your patterns, get personalized relief recommendations, and finally connect the dots between your symptoms and your cycle.'
+
+url: https://aavia.ios/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-25'
+
 modified: '2026-10-25'
+
 tags:
-- Company
-apis: []
+- Health
+- Women's Health
+- Hormone Tracking
+- Cycle Management
+- Wellness
+
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-- FN: APIs.json
-  email: info@apis.io
-x-backed-by:
-- starting-line-vc
+- name: Aavia Team
+  email: support@aavia.io
+
 common:
+- type: LLMsTxt
+  url: llms/aavia-llms.txt
+- type: WellKnown
+  url: well-known/aavia-well-known.yml
+- type: Hosts
+  url: hosts/aavia-hosts.yml
+- type: Vendors
+  url: vendors/aavia-vendors.yml
+- type: TermsOfService
+  url: https://aavia.io/pages/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://aavia.io/pages/privacy-policy
+- type: Login
+  url: https://aavia.io/account/login
+- type: Blog
+  url: https://aavia.io/blogs/blog
+- type: DomainSecurity
+  url: security/aavia-domain-security.yml
 - type: Website
   url: https://aavia.io
+
+apis: []
+
+x-backed-by:
+- starting-line-vc
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The homepage loads a JavaScript interstitial and no machine‑readable OpenAPI spec is available.
+  evidence:
+    - url: https://aavia.io/
+      status: 200
+  checked: '2026-10-25'
+x-enrichment:
+  date: '2026-10-25'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
